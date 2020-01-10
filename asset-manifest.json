@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/tri-wahyu/tri-doc/static/css/main.ab961788.chunk.css",
+    "main.js": "/tri-wahyu/tri-doc/static/js/main.5d46d6e6.chunk.js",
+    "main.js.map": "/tri-wahyu/tri-doc/static/js/main.5d46d6e6.chunk.js.map",
+    "runtime~main.js": "/tri-wahyu/tri-doc/static/js/runtime~main.fdd9f2c8.js",
+    "runtime~main.js.map": "/tri-wahyu/tri-doc/static/js/runtime~main.fdd9f2c8.js.map",
+    "static/js/2.c57de064.chunk.js": "/tri-wahyu/tri-doc/static/js/2.c57de064.chunk.js",
+    "static/js/2.c57de064.chunk.js.map": "/tri-wahyu/tri-doc/static/js/2.c57de064.chunk.js.map",
+    "index.html": "/tri-wahyu/tri-doc/index.html",
+    "precache-manifest.dac958f61b660148c61eca8993e03437.js": "/tri-wahyu/tri-doc/precache-manifest.dac958f61b660148c61eca8993e03437.js",
+    "service-worker.js": "/tri-wahyu/tri-doc/service-worker.js",
+    "static/css/main.ab961788.chunk.css.map": "/tri-wahyu/tri-doc/static/css/main.ab961788.chunk.css.map",
+    "static/media/avatar.jpg": "/tri-wahyu/tri-doc/static/media/avatar.f1d71f77.jpg",
+    "static/media/bg2.jpg": "/tri-wahyu/tri-doc/static/media/bg2.84378183.jpg",
+    "static/media/bg7.jpg": "/tri-wahyu/tri-doc/static/media/bg7.b08234a2.jpg",
+    "static/media/christian.jpg": "/tri-wahyu/tri-doc/static/media/christian.56633ed3.jpg",
+    "static/media/clem-onojegaw.jpg": "/tri-wahyu/tri-doc/static/media/clem-onojegaw.c058841b.jpg",
+    "static/media/clem-onojeghuo.jpg": "/tri-wahyu/tri-doc/static/media/clem-onojeghuo.216ef03c.jpg",
+    "static/media/cynthia-del-rio.jpg": "/tri-wahyu/tri-doc/static/media/cynthia-del-rio.9813593c.jpg",
+    "static/media/kendall.jpg": "/tri-wahyu/tri-doc/static/media/kendall.e0508cc9.jpg",
+    "static/media/landing-bg.jpg": "/tri-wahyu/tri-doc/static/media/landing-bg.df8fd3ef.jpg",
+    "static/media/mariya-georgieva.jpg": "/tri-wahyu/tri-doc/static/media/mariya-georgieva.4575c40b.jpg",
+    "static/media/olu-eletu.jpg": "/tri-wahyu/tri-doc/static/media/olu-eletu.4112cbc1.jpg",
+    "static/media/profile-bg.jpg": "/tri-wahyu/tri-doc/static/media/profile-bg.baf6b40a.jpg",
+    "static/media/studio-1.jpg": "/tri-wahyu/tri-doc/static/media/studio-1.ae0150c0.jpg",
+    "static/media/studio-2.jpg": "/tri-wahyu/tri-doc/static/media/studio-2.76e2987e.jpg",
+    "static/media/studio-3.jpg": "/tri-wahyu/tri-doc/static/media/studio-3.1d5451ce.jpg",
+    "static/media/studio-4.jpg": "/tri-wahyu/tri-doc/static/media/studio-4.e064d090.jpg",
+    "static/media/studio-5.jpg": "/tri-wahyu/tri-doc/static/media/studio-5.ef5c30ea.jpg"
+  }
+}
