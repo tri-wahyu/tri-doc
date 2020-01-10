@@ -36,6 +36,47 @@ export default function SectionPills() {
   <p>&nbsp; &nbsp; &nbsp; &nbsp; 'input3': [null, Validators.compose([Validators.required, Validators.maxLength(50), ValidationService.alphaNumValidator])],</p>
   <p>&nbsp; &nbsp; });</p>
   <p>}</p>`
+  const formHTML = `<p><span style="font-size: 12px;">&lt;form [formGroup]="contohForm" class="m-form m-form--state" &gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; div class="form-group row" [formControlStyle]="contohForm"&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &lt;label class="col-sm-3 col-form-label"&gt;Label 1&lt;i class="text-danger"&gt;*&lt;/i&gt;&lt;/label&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="col-sm-8"&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input #hasMessage autocomplete="off" formControlName="input1"/&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &lt;/div&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; div class="form-group row" [formControlStyle]="contohForm"&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &lt;label class="col-sm-3 col-form-label"&gt;Label 2&lt;i class="text-danger"&gt;*&lt;/i&gt;&lt;/label&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="col-sm-8"&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input #hasMessage autocomplete="off" formControlName="input2"/&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &lt;/div&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; div class="form-group row" [formControlStyle]="contohForm"&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &lt;label class="col-sm-3 col-form-label"&gt;Label 3&lt;i class="text-danger"&gt;*&lt;/i&gt;&lt;/label&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class="col-sm-8"&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input #hasMessage autocomplete="off" formControlName="input3"/&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p>
+  <p><span style="font-size: 12px;">&nbsp; &nbsp; &lt;/div&gt;</span></p>
+  <p><span style="font-size: 12px;">&lt;/form&gt;</span></p>`;
+  const conService = `<p>constructor(</p>
+    <p>&nbsp; &nbsp; injector: Injector,</p>
+    <p>&nbsp; &nbsp; private _socialService: SocialMediaService</p>
+    <p>) {</p>
+    <p>&nbsp; &nbsp; super(injector)</p>
+    <p>}</p>`;
+  const contService = `<p><span style="font-size: 12px;">this._socialService.GetAllListSocialMedia().subscribe((data: any) =&gt; {</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; if (data.error) {</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; this.msg.error(data.error.message, data.error.details)</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; }</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; else {</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; this.primengDatatableHelper.records = data.result;</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; this.primengDatatableHelper.totalRecordsCount = data.result.length</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; &nbsp; &nbsp; this.primengDatatableHelper.defaultRecordsCountPerPage = 5;</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; }</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; this.loading = false;</span></p>
+    <p><span style="font-size: 12px;">}, err =&gt; {</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; let msgVar = err.statusText</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; this.msg.error(msgVar);</span></p>
+    <p><span style="font-size: 12px;">&nbsp; &nbsp; this.loading = false;</span></p>
+    <p><span style="font-size: 12px;">});</span></p>`
   function goTo(link) {
     window.open(link);
   }
@@ -221,6 +262,12 @@ export default function SectionPills() {
                           <li>ketik <code><span class="smoke">ng g c *namaComponent*</span></code> di terminal</li>
                           <li>angular component akan otomatis terbuat dan terimport ke module angular di direktori tersebut.</li>
                         </ul>
+                        <h3>Navigation</h3>
+                        <ul>
+                          <li>Untuk menambahkan navigasi buka file di <span class="smoke">src/app/shared/layout/app-navigation.service.ts</span> kemudian tambahkan</li>
+                          <code><div class="smoke code" dangerouslySetInnerHTML={{__html: navigationCode}}></div></code>
+                          <li>Tambahkan script diatas untuk menambahkan navigasi </li>
+                        </ul>
                         <h3>Swagger</h3>
                         <ul>
                           <li>Untuk menjalankan swagger buka file di <span class="smoke">nswag/swagger.json</span></li>
@@ -230,11 +277,23 @@ export default function SectionPills() {
                           <li>isi output dengan direktori yang diinginkan untuk menyimpan service</li>
                           <li>jalankan command yarn nwag</li>
                         </ul>
-                        <h3>Navigation</h3>
+                        <h3>Service</h3>
                         <ul>
-                          <li>Untuk menambahkan navigasi buka file di <span class="smoke">src/app/shared/layout/app-navigation.service.ts</span> kemudian tambahkan</li>
-                          <code><div class="smoke code" dangerouslySetInnerHTML={{__html: navigationCode}}></div></code>
+                          <li>Untuk memanggil service pastikan service sudah ada di swagger BE dan sudah menjalankan swagger</li>
+                          <li>tambahkan service pada constructor</li>
+                          <code><div class="smoke code" dangerouslySetInnerHTML={{__html: conService}}></div></code>
+                          <li>panggil service yang diinginkan</li>
+                          <code><div class="smoke code" dangerouslySetInnerHTML={{__html: contService}}></div></code>
                           <li>Tambahkan script diatas untuk menambahkan navigasi </li>
+                        </ul>
+                        <h3>Form Validation</h3>
+                        <p>Membuat validasi form</p>
+                        <ul>
+                          <li>Buat var formGroup dan construktor formBuilder di file ts component</li>
+                          <li>Definisikan validasi yang dibutuhkan di construktor file ts</li>
+                          <code><div class="smoke code" dangerouslySetInnerHTML={{__html: formBuilder}}></div></code>
+                          <li>Buat form dengan menggunakan form group yang telah di buat diatas pada file html</li>
+                          <code><div class="smoke code" dangerouslySetInnerHTML={{__html: formHTML}}></div></code>
                         </ul>
                         <h3>Datepicker</h3>
                         <ul>
@@ -244,14 +303,7 @@ export default function SectionPills() {
                           <li>tambahkan provider berikut untuk mengganti config default datepicker dengan config yang tadi dibuat</li>
                           <pre>{provider}</pre>
                         </ul>
-                        <h3>Form Validation</h3>
-                        <p>Membuat validasi form</p>
-                        <ul>
-                          <li>Buat var formGroup dan construktor formBuilder di file ts component</li>
-                          <li>Definisikan validasi yang dibutuhkan di construktor file ts</li>
-                          <code><div class="smoke code" dangerouslySetInnerHTML={{__html: formBuilder}}></div></code>
-                          <li>angular component akan otomatis terbuat dan terimport ke module angular di direktori tersebut.</li>
-                        </ul>
+                        
                       </span>
                     )
                   }
